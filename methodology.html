@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="shortcut icon" type="image/png" href="images/logo.png" />
+    <title>SIS | Methodology</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/placementcarousel.css">
+    <script src="https://kit.fontawesome.com/64b72c38e6.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans|Pacifico|Khand|Barlow:700i|Crimson+Text|Roboto+Slab&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <!-- Top Navbar Starts -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand topnav" href="index.html">
+            <img src="images/logo.png" alt="XYZ logo" class="topnav">
+            <img src="images/logoname.png" alt="XYZ" class="topnav">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="technologies.html" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Scope
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="research.html">Research Gap</a>
+                        <a class="dropdown-item" href="objectives.html">Objectives</a>
+                        <a class="dropdown-item" href="technologies.html">Technologies</a>
+                        <a class="dropdown-item" href="methodology.html">Methodology</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="milestones.html">Milestones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="documents.html">Documents</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="presentation.html">Presentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html">Contact Us</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- Top Navbar ends -->
+
+    <!-- Main Content Starts -->
+    <div style="height: 75px;"></div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="images/courses.jpg"
+        style="height: 120px; align-content: center;">
+        <h1 id="custxt" style="text-align: center; font-size: 45px; opacity: 0.8;"><mark>Methodology</mark></h1>
+    </div>
+    <div class="container mt-3"">
+        <h1 class=" mt-1 mb-2">Methodology</h1>
+        <hr />
+
+        <h4 class="mt-3 mb-3">1). Processing voice inputs to gain productive output</h4>
+        <hr class="line" />
+        <p style="text-align: justify; margin-top: 20px;">
+            Basically, Traditional interviewing process starts with the technical interview. In this phase, interviewee
+            will have to
+            provide answers for different question asked from them. These questions will be asked to evaluate the
+            technical
+            knowledge of the interviewee. The answers they provide will be taken as voice inputs to the system. After
+            the voice
+            inputs are taken in as texts. Before that words will be vectored using a Word2Vec model. After that, using a
+            neural
+            network, word similarities will be checked. Word similarity is checked to see the accuracy of the answers
+            provided by
+            the interviewee. The results will be stored in a No-SQL database, because there are many unstructured data
+            to be saved
+            for future uses. MongoDB Atlas delivers MongoDB for modern applications as a fully automated cloud
+            service.The
+            candidates might have their preferred working areas. Gathered voice input data will be used to detect
+            specific keywords
+            related to these different working areas. This keyword detection will be mostly based on examples that
+            candidate using
+            for explain some software engineering theories or applications. Those kind of keywords also will be
+            extracted from this
+            system and store inside the database for future usage. Overall this sub system focusing to conduct fair oral
+            interviews
+            for candidates with less human interactions.
+        </p>
+        <h4 class="mt-3 mb-3">2). Training Machine Learning model to evaluate
+            answers of written test.</h4>
+        <hr class="line" />
+        <p style="text-align: justify; margin-top: 20px;">
+            In order to calculate the document similarity, cosine similarity method has been used. Cosine similarity
+            method requires the vector representation of a text document. Currently there are numerous methods turn a
+            text document into its vector representation. But there's an issue. When a text document is turned into its
+            vector representation using these methods, the context of the document is not considered. Thus, Doc2Vec has
+            been used to avoid this issue. Doc2Vec is an expansion of the Word2Vec model. Unlike Word2Vec, Doc2Vec can
+            be used to turn a whole document into its vector representation. Doc2Vec model requires tagged documents to
+            be trained on. A customer method has been written to tag documents in train data set. After that a
+            vocabulary has been created since Doc2Vec uses the vocabulary during the training process. After training
+            the model, it is used to turn user given answers and pre-defined answers to vectors. Then, by using cosine
+            similarity, similarity is checked and a score is given.
+        </p>
+        <h4 class="mt-3 mb-3">3). Categorizing candidates using processed data.</h4>
+        <hr class="line" />
+        <p style="text-align: justify; margin-top: 20px;">
+            A classification algorithm has been used to do a text classification in order to predict a preferred working
+            area. After predicting the area, candidate would be categorized under that predcited working area. Data
+            related to 4 working areas have been collected and Support Vector Machine algorithm and Multinomial Naive
+            Bayes algorithm were trained using the data. Based on the classification report of both algorithms,
+            Multinomial Naive Bayes algorithm is selected. Prior to use the data to train the model, text documents have
+            been converted into vectors using CountVectorizer. After that, using Tf - Idf has been used to downscale the
+            words that occur in a document more than usually, such as "a, and, to". Since we are using Count Vectorizer,
+            these words can affect the performance of the model. After that, the model is trained using the data.
+        </p>
+        <h4 class="mt-3 mb-3">4). Training Machine Learning model to predict future
+            HRM related problems.</h4>
+        <hr class="line" />
+        <p style="text-align: justify; margin-top: 20px; margin-bottom: 40px;">
+            This research part is to identify candidate’s personality traits based on the information that gather from
+            the CVs and question asked when candidates upload their CVs to this application. In this research big 5
+            model used to predict personality traits.<br />
+            The system built in this project predicts personality of peoples by using their gender, age, score of
+            openness, conscientiousness, extraversion, agreeableness, neuroticism and experience . It parses all the
+            data from CV/resume and on the result page, it shows all the information from the entered data and uploaded
+            resume. This system uses logistic regression for training the model and pyresparser module for parsing the
+            information from resume which is built using nltk and spaCy module in python.
+        </p>
+    </div>
+    <!-- Main Content Ends -->
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

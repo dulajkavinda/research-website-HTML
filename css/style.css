@@ -252,3 +252,35 @@ blockquote {
 blockquote p {
   text-align: justify;
 }
+
+.background-shadow {
+  margin-top: 25px;
+  padding: 20px;
+  box-shadow: 5px 4px 8px 5px rgba(0, 0, 0, 0.2),
+    10px 6px 20px 10px rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+.desc {
+  margin-top: 20px;
+  text-align: justify;
+  font-size: 20px;
+}
+
+hr {
+  margin: 5px;
+  border: 2px solid lightskyblue;
+  border-radius: 20px;
+  width: 35%;
+}
+
+.banner {
+  height: 2800px;
+}
+
+.line {
+  margin: 5px;
+  border: 2px solid darkslategray;
+  border-radius: 20px;
+  width: 90%;
+}
