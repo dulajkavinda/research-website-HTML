@@ -275,7 +275,8 @@ hr {
 }
 
 .banner {
-  height: 2800px;
+  height: 75%;
+  width: 100%;
 }
 
 .line {
